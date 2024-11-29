@@ -1,0 +1,182 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: poppins;
+}
+
+body {
+    background-image: url('/Images/Backgrounds/bg-1.png');
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    padding: 0 2em;
+    transition: opacity .5s ease-in-out,background-image .5s ease-in-out;
+    opacity: 1;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 150px;
+    object-fit: contain;
+}
+
+nav {
+    display: flex;
+    gap: 2em;
+    margin-right: 3em;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+}
+
+nav a:first-child {
+    color: #f4bc1a;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 2em;
+}
+
+.dish-details-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    color: white;
+    font-weight: bold;
+}
+
+.dish-img-div {
+    width: 300px;
+    height: 300px;
+}
+
+.dish-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    transition: all .5s ease-in-out;
+    opacity: 1;
+    transform: scale(1);
+}
+
+.name {
+    font-size: 1.2rem;
+}
+
+.ratings-div {
+    display: flex;
+    gap: .5em;
+    align-items: center;
+}
+
+.ratings {
+    background-image: linear-gradient(135deg, #f7b700, #794000);
+    padding: .5em .3em;
+    border-radius: 8px;
+    display: flex;
+    width: fit-content;
+    gap: .3em;
+    align-items: center;
+    opacity: 1;
+}
+
+.ratings i {
+    font-size: .7rem;
+}
+
+.name, .cuisine,.rating{
+    transition: opacity .6s ease-in-out;
+    opacity: 1;
+}
+
+.place-order-btn {
+    border: none;
+    background-image: linear-gradient(135deg, #f7b700, #794000);
+    font-size: 1.1rem;
+    padding: .3em 1em;
+    width: fit-content;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+}
+
+.hidden{
+    opacity: 0;
+}
+
+.fade-out {
+    opacity: 0;
+}
+
+.fade-in {
+    opacity: 1;
+    transform: scale(1);
+}
+
+
+.dish-list-container {
+    width: 500px;
+    height: 500px;
+    position: relative;
+}
+
+.dish-list-wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform .5s ease-in-out;
+
+}
+
+.dish-list-wrapper>img {
+    width: 120px;
+    object-fit: cover;
+    height: 140px;
+    border-radius: 20px;
+    position: absolute;
+    cursor: pointer;
+    transition: transform .5s ease-in-out;
+}
+
+.dish-list-container > img{
+    position: absolute;
+    width: 200px;
+    top: 57%;
+    left: -30px;
+    z-index: -1;
+}
+
+[data-position="top"] {
+    transform: translate(0, -180px);
+}
+
+[data-position="bottom"] {
+    transform: translate(0, 180px);
+}
+
+[data-position="left"] {
+    transform: translate(-180px, 0);
+    position: relative;
+}
+
+[data-position="right"] {
+    transform: translate(180px, 0);
+}
