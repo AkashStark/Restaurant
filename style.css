@@ -5,7 +5,7 @@
 }
 
 body {
-    background-image: url('https://akashstark.github.io/Images/Backgrounds/bg-1.png');
+    background-image: url('./Images/Backgrounds/bg-1.png');
     width: 100vw;
     height: 100vh;
     background-size: cover;
