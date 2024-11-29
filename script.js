@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
           d.setAttribute("data-position", positions[(oldIndex + steps) % positions.length]);
         });
 
-        updateDetails(this.getAttribute("data-index"), this.src, `/Images/Backgrounds/${this.getAttribute("data-bg")}`);
+        updateDetails(this.getAttribute("data-index"), this.src, `https://akashstark.github.io/Images/Backgrounds/${this.getAttribute("data-bg")}`);
       }
     });
   });
